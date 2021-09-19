@@ -57,6 +57,7 @@ A new way 2 write less css 2 make responsive cards using a css property called "
 .grid-container {
   width: clamp(20rem, 80rem, 80rem);
 }
+```
 
 ### Continued development
 
