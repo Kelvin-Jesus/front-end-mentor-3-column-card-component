@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 10px;
+    --bo: hsl(31, 77%, 52%);
+    --dc: hsl(184, 100%, 22%);
+    --vdc: hsl(179, 100%, 13%);
+    --ld-font: 'Lexend Deca', sans-serif;
+    --bs-font: 'Big Shoulders Display', sans-serif;
+    --f-Very-light-gray: hsl(0, 0%, 95%);
+    --f-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    background: #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: clamp(20rem, 80rem, 80rem);
+    margin: 4rem 2rem;
+}
+
+.grid-card {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 1fr;
+    min-height: 45rem;
+    margin: 0 auto;
+}
+
+.grid-card:nth-child(1) {
+    background: var(--bo);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.grid-card:nth-child(2) {
+    background: var(--dc);
+}
+
+.grid-card:nth-child(3) {
+    background: var(--vdc);
+    border-radius: 0 1rem 1rem 0 ;
+}
+
+.card-title {
+    font-family: var(--bs-font);
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.card-paragraph {
+    font-size: 1.2rem;
+    font-family: var(--ld-font);
+    color: var(--f-transparent-white);
+    line-height: 1.6;
+}
+
+button {
+    font-family: var(--ld-font);
+    border: 2px solid var(--f-Very-light-gray);
+    color: var(--f-Very-light-gray);
+    border-radius: 10rem;
+    padding: 1.2rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    cursor: pointer;
+    will-change: all;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background: var(--f-Very-light-gray);
+    
+}
+
+.grid-card:nth-child(1) button:hover {
+    color: var(--bo);
+}
+
+.grid-card:nth-child(2) button:hover {
+    color: var(--dc);
+}
+
+.grid-card:nth-child(3) button:hover {
+    color: var(--vdc);
+}
+
+.attribution {
+    position: fixed;
+    bottom:10px;
+    background: var(--bo);
+    padding: 1rem;
+    border-radius: 1.2rem;
+    font-family: var(--ld-font);
+}
+
+.attribution a {
+    color: var(--f-Very-light-gray);
+    transition: all ease .3s;
+}
+
+.attribution a:hover {
+    color: #fff;
+}
+
+@media (max-width: 37.5rem)  {
+
+    body {
+        height: 100%;
+    }
+
+    .grid-container {
+        margin: 6rem 0;
+        grid-template-columns: repeat(1, 1fr);
+        width: 30rem;
+    }
+
+    .grid-card {
+        min-height: 25rem;
+    }
+
+    .card-title {
+        font-size: 3.2rem;
+    }
+
+    .grid-card:nth-child(1) {
+        border-radius: 1rem 1rem 0 0  ;
+    }
+
+    .grid-card:nth-child(3) {
+        border-radius: 0 0 1rem 1rem ;
+    }
+
+    button {
+        width: 12rem;
+        margin: 0;
+    }
+
+    
+}
